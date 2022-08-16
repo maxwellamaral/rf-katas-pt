@@ -1,73 +1,79 @@
-# Getting started
+# Começando
 
-In this section we will install Robot Framework, needed test libraries and ensure that the environment
-is up and running in order to do web UI testing with Robot Framework.
+Nesta seção, instalaremos o Robot Framework, as bibliotecas de teste necessárias e garantiremos que o ambiente esteja
+funcionando para fazer testes de interface do usuário da Web com o Robot Framework.
 
-## Terminology
+## Terminologia
 
-In this section, you will see a lot of Python, operating system and Robot Framework related jargon
-which might be confusing to some. So before you go further, let's clarify some terminology that is
-used frequently in this ecosystem.
+Nesta seção, você verá muitos jargões relacionados ao Python, ao sistema operacional e ao Robot Framework que podem ser
+confusos para alguns. Portanto, antes de prosseguir, vamos esclarecer algumas terminologias que são usadas com
+frequência nesse ecossistema.
 
-- *pip* - Python package manager, this is a tool that is needed to install Robot Framework and needed test libraries
-- *shell* - The shell is the command interpreter in an operating system such as Unix or GNU/Linux, it is a program that executes other programs
-- *bat / batch file / cmd* - A batch file is a script file in DOS, OS/2 and Microsoft Windows. It consists of a series of commands to be executed by the command-line interpreter, stored in a plain text file.
-- *robot* - The command line tool that allows the user to run Robot Framework test cases and tasks
-- *test suite* - A Robot file that contains test cases
-- *keyword* - a component, similar to a function in programming, that robot uses to execute steps
-- *arguments* - Values that are given to keywords. Also known as parameters.
+- *pip* - Gerenciador de pacotes Python, esta é uma ferramenta necessária para instalar o Robot Framework e as
+  bibliotecas de teste necessárias
+- *shell* - O shell é o interpretador de comandos em um sistema operacional como Unix ou GNULinux, é um programa que
+  executa outros programas
+- *bat / batch file / cmd* - Um arquivo de lote é um arquivo de script no DOS, OS2 e Microsoft Windows. Consiste em uma
+  série de comandos a serem executados pelo interpretador de linha de comando, armazenados em um arquivo de texto
+  simples.
+- *robot* - A ferramenta de linha de comando que permite ao usuário executar casos de teste e tarefas do Robot Framework
+- *test suite* - Um arquivo Robot que contém casos de teste
+- *keyword* - um componente, semelhante a uma função na programação, que o robô usa para executar etapas
+- *arguments* - Valores que são dados a palavras-chave. Também conhecido como parâmetros.
 
-## Get the Repository
+## Obtenha o Repositório
 
-Clone the repository or download and extract the repository ZIP to your local machine. All exercises will be completed using the
-local copy of the repo.
+Clone o repositório ou baixe e extraia o ZIP do repositório para sua máquina local. Todos os exercícios serão concluídos
+usando a cópia local do repositório.
 
-![Clone the repository](img/clone_repo.png)
+![Clonar o repositório](img/clone_repo.png)
 
-## Install Robot Framework
+## Instalar o Robot Framework
 
-In order to run Robot Framework test cases we're going to need install Robot Framework. We install this by
-using `pip`. By default, the installation happens by calling `pip3 install <package_name>`, but if you are
-using a virtual environment, or have an alias defined, you can try `pip install <package_name>` instead.
+Para executar os casos de teste do Robot Framework, precisaremos instalar o Robot Framework. Nós instalamos isso
+usando `pip`. Por padrão, a instalação acontece chamando `pip3 install <package_name>`, mas se você estiver usando um
+ambiente virtual, ou tiver um alias definido, você pode tentar `pip install <package_name>` em vez disso.
 
-Install Robot Framework: `pip3 install robotframework`.
+Instale o Robot Framework: `pip3 install robotframework`.
 
-If the installation was successful, you can use `robot -h` command to verify that you get command line
-help for Robot Framework. Output should include Robot version number and some other helpful stuff,
-including the command line options (which are also available in [here](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#all-command-line-options)).
+Se a instalação foi bem-sucedida, você pode usar o comando `robot -h` para verificar se obteve ajuda da linha de comando
+para o Robot Framework. A saída deve incluir o número da versão do robô e algumas outras coisas úteis, incluindo as
+opções de linha de comando (que também estão disponíveis
+em [aqui](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#all-command-line-options)).
 
-To run automated test cases for web UIs, the current go-to library is the Browser-library.
+Para executar casos de teste automatizados para UIs da Web, a biblioteca atual é a Browser-library.
 
-Install Browser: `pip3 install robotframework-browser`. After the installation has completed successfully,
-the library has to be initialized by running `rfbrowser init`.
+Instale o navegador: `pip3 install robotframework-browser`. Após a instalação ser concluída com sucesso, a biblioteca
+deve ser inicializada executando `rfbrowser init`.
 
-In order to ensure that you've done exercises as expected we need you to install robotframework-lint
-tool. A linting tool is a lightweight static analysis tool to verify that you and your team are doing
-your code consistently.
+Para garantir que você tenha feito os exercícios conforme o esperado, precisamos que você instale a ferramenta
+robotframework-lint. Uma ferramenta de linting é uma ferramenta de análise estática leve para verificar se você e sua
+equipe estão fazendo seu código de forma consistente.
 
 Install Robot Framework linter: `pip3 install robotframework-lint`.
 
-## Install NodeJS
+## Instalar o NodeJS
 
-Browser library has requirements for NodeJS. After installing NodeJS run command: `rfbrowser init` to install needed dependencies.
+A biblioteca do navegador tem requisitos para NodeJS. Após instalar o NodeJS, execute o comando: `rfbrowser init` para
+instalar as dependências necessárias.
 
-## Start server
+## Iniciar servidor
 
-In order to run the exercises in this training, you need to start the demo app. You can start the server
-by running `python3 server/server.py` in your terminal/command prompt. Your terminal or command prompt is
-now occupied with running the server, which means you need to open another terminal/command prompt to run
-your tests.
+Para executar os exercícios deste treinamento, você precisa iniciar o aplicativo de demonstração. Você pode iniciar o
+servidor executando `python3 server/server.py` no prompt de comando do terminal. Seu terminal ou prompt de comando agora
+está ocupado com a execução do servidor, o que significa que você precisa abrir outro prompt de comando do terminal para
+executar seus testes.
 
-After the server has started it will be running in http://localhost:7272.
+Depois que o servidor for iniciado, ele será executado em http:localhost:7272.
 
-## Verify installation
+## Verifique a instalação
 
-Verify setup by running:
+Verifique a configuração executando:
 
-- in Windows: run command `python verify.py 00`
-- in macOS/Linux: run command `python3 verify.py 00`
+- no Windows: execute o comando `python verify.py 00`
+- no macOSLinux: execute o comando `python3 Verify.py 00`
 
-This should take a few seconds. If the output of the script ends with `Setup in perfect condition!`
-we're good to go.
+Isso deve levar alguns segundos. Se a saída do script terminar com `Setup in perfect condition!`
+estamos prontos para ir.
 
-Otherwise, check the output and fix the missing packages.
+Caso contrário, verifique a saída e corrija os pacotes ausentes.

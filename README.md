@@ -1,32 +1,32 @@
 # Robot Framework katas
 
-## Requirements
+## Requisitos
 
-In this series of exercises we're going to run several automated tests against web application. To do
-that we're going to need to have the following items installed:
+Nesta série de exercícios vamos executar vários testes automatizados em uma aplicação web. Para isso, precisaremos ter
+os seguintes itens instalados:
 
-- Python (version 3.7 or newer): https://www.python.org/downloads/
-  - Remember to add Python folder to PATH environment variable.
+- Python (versão 3.7 ou mais recente): https://www.python.org/downloads/
+    - Lembre-se de adicionar a pasta Python à variável de ambiente PATH.
 - Pip for Python 3
-  - Windows: https://www.howtogeek.com/197947/how-to-install-python-on-windows/
-  - Linux: `sudo apt-get install python3-pip && pip3 install --upgrade pip`
-  - macOS: `brew install python` pip is already included
-- Node.js (version 12 or newer): https://nodejs.org/en/download/
-- System under test
-  - Open a new terminal window, change directory to this repository root folder and run the application
-    with: `python server/server.py`
+    - Windows: https://www.howtogeek.com/197947/how-to-install-python-on-windows/
+    - Linux: `sudo apt-get install python3-pip && pip3 install --upgrade pip`
+    - macOS: `brew install python` pip já está incluído
+- Node.js (versão 12 ou mais recente): https://nodejs.org/en/download/
+- Sistema em teste
+    - Abra uma nova janela de terminal, altere o diretório para esta pasta raiz do repositório e execute o aplicativo
+      com: `python server/server.py`
 
-### Recommended
+### Recomendado
 
-- In order to make installing with pip easier, use virtualenv (https://virtualenv.pypa.io/en/latest/)
-  - Short instruction to virtualenv use
+- Para facilitar a instalação com pip, use virtualenv (https://virtualenv.pypa.io/en/latest/)
+    - Instruções curtas para uso do virtualenv
 
-    ```shell
-    pip install virtualenv --user
-    virtualenv <choose_a_folder_name>
-    source <chosen_folder_name>/bin/activate
-    ```
+      ```shell
+      pip install virtualenv --user
+      virtualenv <choose_a_folder_name>
+      source <chosen_folder_name>/bin/activate
+      ```
 
-## Get started
+## Iniciar
 
-After you have installed the requirements check the [Getting started exercise](exercises/00-getting-started.md) and proceed with the exercises.
+Depois de instalar os requisitos, verifique o [Começando o exercício](exercises/00-getting-started.md) e prossiga com os exercícios.
